@@ -39,7 +39,7 @@ router.post('/addSuspect', (req, res) => {
             model: req.body.model,
             colour: req.body.colour,
     });
-        
+
     newSuspect.save().then(suspect => res.json(suspect))
     .catch(err => console.log(err));
 })
