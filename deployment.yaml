@@ -1,0 +1,21 @@
+    
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: skyre-case
+  labels: 
+    app: skyre-case
+spec:
+  selector:
+    matchLabels:
+      app: skyre-case
+  template:
+    metadata:
+      labels:
+        app: skyre-case
+    spec:
+      containers:
+      - name: skyre-case
+        image: eyjafjalla/skyre-case:latest
+        ports:
+        - containerPort: 8085
