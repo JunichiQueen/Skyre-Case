@@ -13,7 +13,7 @@ router.get('/', (req, res) => {
 
         res.json(suspects);
     })
-    .catch(err => res.status(404).json({ noSuspects: "There are no suspects"}));
+    .catch(err => res.status(404).json({ noSuspects: "There npmare no suspects"}));
 });
 
 router.post('/addSuspect', (req, res) => {
@@ -22,7 +22,7 @@ router.post('/addSuspect', (req, res) => {
             citizenId: req.body.citizenId,
             forenames: req.body.forenames,
             surname: req.body.surname,
-            address: req.body.address,
+            homeAddress: req.body.homeAddress,
             dateOfBirth: req.body.dateOfBirth,
             placeOfBirth: req.body.placeOfBirth,
             sex: req.body.sex,
@@ -32,7 +32,7 @@ router.post('/addSuspect', (req, res) => {
             phoneNumber: req.body.phoneNumber,
             network: req.body.network,
             registrationId: req.body.registrationId,
-            driverlicenseId: req.body.driverlicenceId,
+            driverLicenceId: req.body.driverLicenceId,
             vehicleRegistrationNo: req.body.vehicleRegistrationNo,
             registrationDate: req.body.registrationDate,
             make: req.body.make,
