@@ -8,7 +8,7 @@ const suspect = require('./routes/suspect');
 const db = require("./config/keys").mongoURI;
 
 mongoose
-  .connect('mongodb://mongo:27017/case', { useNewUrlParser: true })
+  .connect('mongodb://mongo:27017/case?authSource=admin', { useNewUrlParser: true })
   .then(() => console.log("Connected to MongoDB"))
   .catch(err => console.log(err));
 
